@@ -50,8 +50,8 @@ A modern AI-powered notes application built with Next.js, Supabase, and Gemini A
 
 1. Clone the repository:
 ```sh
-git clone https://github.com/yourusername/notes-app.git
-cd notes-app
+git clone https://github.com/yourusername/notes-ai.git
+cd notes-ai
 ```
 
 2. Install dependencies:
