@@ -18,11 +18,18 @@ export async function POST(request: Request) {
     // Use Gemini Pro model
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
-    const prompt = `Summarize the following text in a concise way, preserving the key points and main ideas:
+    const prompt = `Create a concise summary of the following text following these strict guidelines:
+    1. Maximum 3-4 sentences
+    2. Focus only on the most important facts and key points
+    3. Maintain objective tone
+    4. Remove any redundant information
+    5. Use clear and simple language
+    6. Preserve critical details and main arguments
 
+    Text to summarize:
     ${content}
 
-    Summary:`;
+    Concise Summary:`;
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
